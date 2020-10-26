@@ -1,5 +1,6 @@
-package diet.calculator.com.example.diet_calculator.module;
+package diet.calculator.com.example.diet_calculator.module.product;
 
+import diet.calculator.com.example.diet_calculator.module.product.Macronutrients;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +13,7 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,13 +25,10 @@ public class Product {
     private double fatAmount;
     private double carbAmount;
 
-//    @Enumerated(EnumType.ORDINAL)
-//    private Macronutrients macronutrients;
+
 
     public double calculateCalories() {
-        return proteinAmount * Macronutrients.PROTEIN.getCalories() + fatAmount * Macronutrients.FAT.getCalories() + 0;
+        return proteinAmount * Macronutrients.PROTEIN.getCalories() +
+                fatAmount * Macronutrients.FAT.getCalories() + carbAmount * Macronutrients.CARBOHYDRATES.getCalories();
     }
-
-
-
 }

@@ -1,8 +1,12 @@
 package diet.calculator.com.example.diet_calculator.repository;
 
-import diet.calculator.com.example.diet_calculator.module.Product;
+ import diet.calculator.com.example.diet_calculator.module.product.ProductEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductRepository extends JpaRepository<Product,Long> {
+import java.util.List;
 
+public interface ProductRepository extends JpaRepository<ProductEntity,Long> {
+
+
+    List<ProductEntity> findAllByName(String name);
 }

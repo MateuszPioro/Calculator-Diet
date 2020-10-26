@@ -1,4 +1,4 @@
-package diet.calculator.com.example.diet_calculator.module;
+package diet.calculator.com.example.diet_calculator.module.product;
 
 public enum  Macronutrients {
 
