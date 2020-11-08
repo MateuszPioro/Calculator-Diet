@@ -16,8 +16,8 @@ import javax.persistence.*;
 public class ProductEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String name;
 
@@ -27,8 +27,5 @@ public class ProductEntity {
 
 
 
-    public double calculateCalories() {
-        return proteinAmount * Macronutrients.PROTEIN.getCalories() +
-                fatAmount * Macronutrients.FAT.getCalories() + carbAmount * Macronutrients.CARBOHYDRATES.getCalories();
-    }
+
 }
