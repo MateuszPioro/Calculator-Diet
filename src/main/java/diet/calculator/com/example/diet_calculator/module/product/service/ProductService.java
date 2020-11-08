@@ -1,8 +1,10 @@
-package diet.calculator.com.example.diet_calculator.module.product;
+package diet.calculator.com.example.diet_calculator.module.product.service;
 
+import diet.calculator.com.example.diet_calculator.module.mapper.ProductMapper;
+import diet.calculator.com.example.diet_calculator.module.product.model.ProductDto;
+import diet.calculator.com.example.diet_calculator.module.product.model.ProductEntity;
 import diet.calculator.com.example.diet_calculator.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -39,7 +41,7 @@ public class ProductService {
         return productDtoList;
     }
 
-    //zmiana dto entity
+
     public void saveProductDTO(ProductDto productDto) {
         ProductEntity productEntity = ProductMapper.maptoEntity(productDto);
         productRepository.save(productEntity);

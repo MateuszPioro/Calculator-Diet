@@ -1,4 +1,4 @@
-package diet.calculator.com.example.diet_calculator.module.product;
+package diet.calculator.com.example.diet_calculator.module.product.model;
 
 import lombok.*;
 
@@ -18,5 +18,4 @@ public class ProductDto {
         return proteinAmount * Macronutrients.PROTEIN.getCalories() +
                 fatAmount * Macronutrients.FAT.getCalories() + carbAmount * Macronutrients.CARBOHYDRATES.getCalories();
     }
-
 }

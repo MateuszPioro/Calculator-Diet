@@ -1,13 +1,13 @@
-package diet.calculator.com.example.diet_calculator.module.product;
+package diet.calculator.com.example.diet_calculator.module.product.controller;
 
 
+import diet.calculator.com.example.diet_calculator.module.product.service.ProductService;
+import diet.calculator.com.example.diet_calculator.module.product.model.ProductDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 @Log4j2
@@ -23,7 +23,7 @@ public class ProductController {
         model.addAttribute("getProducts",productService.getProducts());
         return "product_form";
     }
-//DTO
+
 
     @GetMapping("/delete")
     public String delete(@RequestParam(name = "productId") Long productId) {

@@ -1,4 +1,7 @@
-package diet.calculator.com.example.diet_calculator.module.product;
+package diet.calculator.com.example.diet_calculator.module.mapper;
+
+import diet.calculator.com.example.diet_calculator.module.product.model.ProductDto;
+import diet.calculator.com.example.diet_calculator.module.product.model.ProductEntity;
 
 public class ProductMapper {
 
@@ -10,6 +13,7 @@ public class ProductMapper {
         productEntity.setFatAmount(productDto.getFatAmount());
         productEntity.setProteinAmount(productDto.getProteinAmount());
         return productEntity;
+
     }
 
     public static ProductDto maptoDTO(ProductEntity productEntity){

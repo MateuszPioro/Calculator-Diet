@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diet Journal</title>
+    <h1>Diet Journal:</h1>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Protein</th>
+        <th>Fat</th>
+        <th>Carbohydrates</th>
+        <th>Calories</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="journal : ${journalList}">
+        <td th:text="${journal.getName()}"></td>
+        <td th:text="${journal.getProteinAmount()}"></td>
+        <td th:text="${journal.getFatAmount()}"></td>
+        <td th:text="${journal.getCarbAmount()}"></td>
+        <td th:text="${journal.calculateCalories()}"></td>
+
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
