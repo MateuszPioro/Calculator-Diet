@@ -20,6 +20,7 @@ public class JournalController {
 
     private final JournalService journalService;
 
+
     @GetMapping("/list")
     public String list(Model model){
         List<ProductDto> list = journalService.findAllListProducts();
