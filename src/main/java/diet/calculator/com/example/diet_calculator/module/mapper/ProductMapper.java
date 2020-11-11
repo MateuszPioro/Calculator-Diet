@@ -16,6 +16,8 @@ public class ProductMapper {
 
     }
 
+
+
     public static ProductDto maptoDTO(ProductEntity productEntity){
         ProductDto productDto = new ProductDto();
         productDto.setName(productEntity.getName());

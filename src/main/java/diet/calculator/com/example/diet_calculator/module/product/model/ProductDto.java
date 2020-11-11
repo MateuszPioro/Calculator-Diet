@@ -18,4 +18,6 @@ public class ProductDto {
         return proteinAmount * Macronutrients.PROTEIN.getCalories() +
                 fatAmount * Macronutrients.FAT.getCalories() + carbAmount * Macronutrients.CARBOHYDRATES.getCalories();
     }
+
+
 }

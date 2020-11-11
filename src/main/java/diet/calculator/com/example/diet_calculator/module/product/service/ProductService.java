@@ -52,11 +52,6 @@ public class ProductService {
     }
 
 
-    @PostConstruct
-    public void init() {
-        saveProductDTO(new ProductDto("apple", 5.0, 4.0, 2.0));
-        saveProductDTO(new ProductDto("watermelon", 5, 4, 2));
-        saveProductDTO(new ProductDto("apple", 5, 4, 2));
-        saveProductDTO(new ProductDto("apple", 5, 4, 2));
-    }
+
+
 }
