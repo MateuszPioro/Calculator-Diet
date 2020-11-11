@@ -1,13 +1,12 @@
 package diet.calculator.com.example.diet_calculator.module.product.service;
 
 import diet.calculator.com.example.diet_calculator.module.mapper.ProductMapper;
-import diet.calculator.com.example.diet_calculator.module.product.model.ProductDto;
-import diet.calculator.com.example.diet_calculator.module.product.model.ProductEntity;
+import diet.calculator.com.example.diet_calculator.module.product.model.dto.ProductDto;
+import diet.calculator.com.example.diet_calculator.module.product.model.entity.ProductEntity;
 import diet.calculator.com.example.diet_calculator.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 

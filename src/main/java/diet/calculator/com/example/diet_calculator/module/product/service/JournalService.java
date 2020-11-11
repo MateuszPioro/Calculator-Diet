@@ -1,9 +1,7 @@
 package diet.calculator.com.example.diet_calculator.module.product.service;
 
 
-import diet.calculator.com.example.diet_calculator.module.product.model.ProductDto;
-import diet.calculator.com.example.diet_calculator.module.product.model.ProductEntity;
-import diet.calculator.com.example.diet_calculator.repository.ProductRepository;
+import diet.calculator.com.example.diet_calculator.module.product.model.dto.ProductDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

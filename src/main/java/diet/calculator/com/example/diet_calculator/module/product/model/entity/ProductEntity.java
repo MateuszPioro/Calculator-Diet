@@ -1,5 +1,6 @@
-package diet.calculator.com.example.diet_calculator.module.product.model;
+package diet.calculator.com.example.diet_calculator.module.product.model.entity;
 
+import diet.calculator.com.example.diet_calculator.module.product.model.Macronutrients;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,10 +25,7 @@ public class ProductEntity {
     private double fatAmount;
     private double carbAmount;
 
-    public double calculateCalories() {
-        return proteinAmount * Macronutrients.PROTEIN.getCalories() +
-                fatAmount * Macronutrients.FAT.getCalories() + carbAmount * Macronutrients.CARBOHYDRATES.getCalories();
-    }
+
 
 
 }

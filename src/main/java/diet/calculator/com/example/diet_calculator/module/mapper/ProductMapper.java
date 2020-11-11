@@ -1,7 +1,7 @@
 package diet.calculator.com.example.diet_calculator.module.mapper;
 
-import diet.calculator.com.example.diet_calculator.module.product.model.ProductDto;
-import diet.calculator.com.example.diet_calculator.module.product.model.ProductEntity;
+import diet.calculator.com.example.diet_calculator.module.product.model.dto.ProductDto;
+import diet.calculator.com.example.diet_calculator.module.product.model.entity.ProductEntity;
 
 public class ProductMapper {
 
