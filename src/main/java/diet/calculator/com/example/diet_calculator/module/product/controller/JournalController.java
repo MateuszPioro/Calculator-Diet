@@ -3,7 +3,9 @@ package diet.calculator.com.example.diet_calculator.module.product.controller;
 
 import diet.calculator.com.example.diet_calculator.module.product.model.dto.JournalForm;
 import diet.calculator.com.example.diet_calculator.module.product.model.dto.ProductDto;
+import diet.calculator.com.example.diet_calculator.module.product.model.entity.JournalEntryEntity;
 import diet.calculator.com.example.diet_calculator.module.product.service.JournalService;
+import diet.calculator.com.example.diet_calculator.module.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,21 +22,20 @@ import java.util.List;
 public class JournalController {
 
     private final JournalService journalService;
-
+    private final ProductService productService;
 
     @GetMapping("/list")
-    public String list(Model model){
-        List<ProductDto> list = journalService.findAllListProducts();
-        model.addAttribute("journalList",list);
-        model.addAttribute("journal_form",new JournalForm());
-        model.addAttribute("availableProducts",list);
+    public String list(Model model) {
+        List<JournalEntryEntity> list = journalService.findAllListProducts();
+        model.addAttribute("journalList", list);
+        model.addAttribute("journal_form", new JournalForm());
+        model.addAttribute("availableProducts", productService.getProducts());
         return "journal_list";
     }
 
-    //zrobić wpis do dziennkia, journalService(addproduct to journal)
     @PostMapping("/add")
-    public String addNewJournalEntry(JournalForm journalForm){
-        System.out.println(journalForm);
+    public String addNewJournalEntry(JournalForm journalForm) {
+        journalService.addProductToJournal(journalForm);
         return "redirect:/journal/list";
     }
 
@@ -43,8 +44,6 @@ public class JournalController {
         journalService.delete(productId);
         return "journal_list";
     }
-
-
 
 
 }

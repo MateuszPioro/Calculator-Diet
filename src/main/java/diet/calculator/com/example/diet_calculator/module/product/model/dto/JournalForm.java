@@ -7,5 +7,5 @@ import lombok.Data;
 public class JournalForm {
 
     private int weight;
-    private Integer productId;
+    private Long productId;
 }

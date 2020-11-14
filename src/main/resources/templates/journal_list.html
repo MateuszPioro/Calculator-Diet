@@ -33,16 +33,17 @@
         <th>Protein</th>
         <th>Fat</th>
         <th>Carbohydrates</th>
+        <th>Weight</th>
         <th>Calories</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="journal : ${journalList}">
-        <td th:text="${journal.getName()}"></td>
-        <td th:text="${journal.getProteinAmount()}"></td>
-        <td th:text="${journal.getFatAmount()}"></td>
-        <td th:text="${journal.getCarbAmount()}"></td>
-        <td th:text="${journal.calculateCalories()}"></td>
+        <td th:text="${journal.getProduct().getName()}"></td>
+        <td th:text="${journal.getProduct().getProteinAmount()}"></td>
+        <td th:text="${journal.getProduct().getFatAmount()}"></td>
+        <td th:text="${journal.getProduct().getCarbAmount()}"></td>
+        <td th:text="${journal.getWeight()}"></td>
 
            <a th:href="@{/journal/delete(productId=${journal.id})}" >Delete</a>
 

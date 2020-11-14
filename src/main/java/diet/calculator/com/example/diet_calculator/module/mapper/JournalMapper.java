@@ -1,12 +1,12 @@
 package diet.calculator.com.example.diet_calculator.module.mapper;
 
 import diet.calculator.com.example.diet_calculator.module.product.model.dto.JournalDto;
-import diet.calculator.com.example.diet_calculator.module.product.model.entity.JournalEntity;
+import diet.calculator.com.example.diet_calculator.module.product.model.entity.JournalEntryEntity;
 
 public class JournalMapper {
 
-    public static JournalEntity mapToEntity(JournalDto journalDto) {
-        JournalEntity journalEntity = new JournalEntity();
+    public static JournalEntryEntity mapToEntity(JournalDto journalDto) {
+        JournalEntryEntity journalEntity = new JournalEntryEntity();
         return journalEntity;
     }
 }
