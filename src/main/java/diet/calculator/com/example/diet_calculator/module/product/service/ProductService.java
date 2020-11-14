@@ -7,6 +7,7 @@ import diet.calculator.com.example.diet_calculator.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,11 +47,13 @@ public class ProductService {
         productRepository.save(productEntity);
     }
 
-    public void delete(Long productId) {
-        productRepository.deleteById(productId);
+    @PostConstruct
+    public void  productsAdd(){
+        ProductDto productDto = new ProductDto();
+        productDto.setName("Bannan");
+        productDto.setCarbAmount(11);
+        productDto.setFatAmount(1);
+        productDto.setProteinAmount(22);
+        saveProductDTO(productDto);
     }
-
-
-
-
 }

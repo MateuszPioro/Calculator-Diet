@@ -10,6 +10,7 @@ import org.w3c.dom.stylesheets.LinkStyle;
 @NoArgsConstructor
 public class ProductDto {
 
+    private Long id;
     private String name;
     private double proteinAmount;
     private double fatAmount;

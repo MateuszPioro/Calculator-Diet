@@ -1,5 +1,6 @@
 package diet.calculator.com.example.diet_calculator.module.product.model.dto;
 
+
 public class JournalDto {
 
     private String name;

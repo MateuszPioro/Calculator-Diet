@@ -19,10 +19,12 @@ public class JournalEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     private String name;
     private double proteinAmount;
     private double fatAmount;
     private double  carbAmount;
+
+
 }

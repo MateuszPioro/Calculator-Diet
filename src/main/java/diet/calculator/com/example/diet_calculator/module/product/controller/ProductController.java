@@ -25,11 +25,6 @@ public class ProductController {
     }
 
 
-    @GetMapping("/delete")
-    public String delete(@RequestParam(name = "productId") Long productId) {
-        productService.delete(productId);
-        return "product_form";
-    }
 
     @PostMapping("/add")
     public String postListProduct(Model model, ProductDto productDto) {
