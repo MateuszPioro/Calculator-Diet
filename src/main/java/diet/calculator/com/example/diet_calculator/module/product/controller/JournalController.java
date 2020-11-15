@@ -1,6 +1,7 @@
 package diet.calculator.com.example.diet_calculator.module.product.controller;
 
 
+import diet.calculator.com.example.diet_calculator.module.product.model.dto.JournalDto;
 import diet.calculator.com.example.diet_calculator.module.product.model.dto.JournalForm;
 import diet.calculator.com.example.diet_calculator.module.product.model.dto.ProductDto;
 import diet.calculator.com.example.diet_calculator.module.product.model.entity.JournalEntryEntity;
@@ -26,7 +27,7 @@ public class JournalController {
 
     @GetMapping("/list")
     public String list(Model model) {
-        List<JournalEntryEntity> list = journalService.findAllListProducts();
+        List<JournalDto> list = journalService.getJournal();
         model.addAttribute("journalList", list);
         model.addAttribute("journal_form", new JournalForm());
         model.addAttribute("availableProducts", productService.getProducts());

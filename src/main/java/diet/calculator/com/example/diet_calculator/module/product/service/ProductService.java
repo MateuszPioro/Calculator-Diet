@@ -23,7 +23,7 @@ public class ProductService {
         productRepository.getOne(productId);
     }
 
-    //zmiana dto na entity  mapToEntity, mozna zapisac w serive privte
+
     public void updateProduct(Long productId, ProductDto productDto) {
         ProductEntity productEntity = ProductMapper.maptoEntity(productDto);
         productEntity.setId(productId);

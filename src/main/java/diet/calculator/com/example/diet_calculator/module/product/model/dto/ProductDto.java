@@ -1,6 +1,7 @@
 package diet.calculator.com.example.diet_calculator.module.product.model.dto;
 
 import diet.calculator.com.example.diet_calculator.module.product.model.Macronutrients;
+import diet.calculator.com.example.diet_calculator.module.product.model.entity.ProductEntity;
 import lombok.*;
 import org.w3c.dom.stylesheets.LinkStyle;
 
@@ -21,5 +22,6 @@ public class ProductDto {
         return proteinAmount * Macronutrients.PROTEIN.getCalories() +
                 fatAmount * Macronutrients.FAT.getCalories() + carbAmount * Macronutrients.CARBOHYDRATES.getCalories();
     }
+
 
 }
