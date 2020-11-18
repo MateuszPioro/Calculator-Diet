@@ -56,6 +56,7 @@ public class JournalService {
     public void updateJournal(Long productId, JournalDto journalDto) {
         JournalEntryEntity journalEntryEntity = JournalMapper.mapToEntity(journalDto);
         journalEntryEntity.setId(productId);
+
     }
 
 

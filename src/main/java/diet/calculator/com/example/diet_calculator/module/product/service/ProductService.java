@@ -47,6 +47,8 @@ public class ProductService {
         productRepository.save(productEntity);
     }
 
+
+
     @PostConstruct
     public void  productsAdd(){
         ProductDto productDto = new ProductDto();
@@ -55,5 +57,25 @@ public class ProductService {
         productDto.setFatAmount(1);
         productDto.setProteinAmount(22);
         saveProductDTO(productDto);
+
+
+//        FoodNutritionService foodNutritionService = new FoodNutritionService();
+//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(39790L);
+//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(32L);
+//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(315L);
+//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(1L);
+//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(23L);
+//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(397L);
+//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(90L);
+//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(970L);
+//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(7910L);
+//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(12345L);
     }
+    public void saveProductEntity(FoodNutritionService foodNutritionService){
+
+
+//        productRepository.save(productEntity);
+    }
+    // TODO zbudowac na tej podstawie ProductEntity (new ProductEntity()    .setName(..)
+    // TODO zapisac ProductEntity do bazy (używając ProductRepository) save
 }

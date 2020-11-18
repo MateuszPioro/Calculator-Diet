@@ -11,12 +11,12 @@
 <body>
 <form action="#" th:action="@{/journal/add}" method="post" th:object="${journal_form}">
     <div class="form-group">
-        <label for="weightInput">Waga produktu: </label>
+        <label for="weightInput">Product Weight: </label>
         <input name="weightInput" id="weightInput" th:field="*{weight}"
                type="number" class="form-control"
                placeholder="Waga produktu w gramach" required/>
     </div>
-    <label for="productSelect">Produkt: </label>
+    <label for="productSelect">Product: </label>
     <select class="form-control" id="productSelect" name="productSelect" th:field="*{productId}" required>
         <option selected style="display:none" th:value="${null}"> -- wybierz produkt -- </option>
         <option
