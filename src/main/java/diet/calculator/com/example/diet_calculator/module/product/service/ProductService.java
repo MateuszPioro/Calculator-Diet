@@ -59,8 +59,8 @@ public class ProductService {
         saveProductDTO(productDto);
 
 
-//        FoodNutritionService foodNutritionService = new FoodNutritionService();
-//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(39790L);
+        FoodNutritionService foodNutritionService = new FoodNutritionService();
+        foodNutritionService.downloadFoodByIdAndSaveProductToDb(39790L);
 //        foodNutritionService.downloadFoodByIdAndSaveProductToDb(32L);
 //        foodNutritionService.downloadFoodByIdAndSaveProductToDb(315L);
 //        foodNutritionService.downloadFoodByIdAndSaveProductToDb(1L);
