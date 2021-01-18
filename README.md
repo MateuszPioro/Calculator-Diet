@@ -11,7 +11,7 @@ adding new products to the application.
 * BOOTSTRAP
 * THYMELEAF
 
- 
 ## Setup
+App is working on localhost:8080
 
-## Status
+ 
