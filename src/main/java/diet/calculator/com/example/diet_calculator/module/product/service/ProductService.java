@@ -14,8 +14,8 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class ProductService {
-
-
+    // zostanie wstrzyknięte automatycznie przez Springa, nie musimy tworzyć obiektu
+    private final FoodNutritionService foodNutritionService;
     private final ProductRepository productRepository;
 
 
@@ -59,23 +59,23 @@ public class ProductService {
         saveProductDTO(productDto);
 
 
-        FoodNutritionService foodNutritionService = new FoodNutritionService();
         foodNutritionService.downloadFoodByIdAndSaveProductToDb(39790L);
-//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(32L);
-//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(315L);
-//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(1L);
-//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(23L);
-//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(397L);
-//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(90L);
-//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(970L);
-//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(7910L);
-//        foodNutritionService.downloadFoodByIdAndSaveProductToDb(12345L);
-    }
-    public void saveProductEntity(FoodNutritionService foodNutritionService){
+        // większość z identyfikatorów poniżej jest nieprawidłowa - i nie ma produktów o takim ID w bzie FatSecret
+        // powinniśmy je skasować - le najpierw zobacz błędy po uruchomieniu
+        foodNutritionService.downloadFoodByIdAndSaveProductToDb(32L);
+        foodNutritionService.downloadFoodByIdAndSaveProductToDb(315L);
+        foodNutritionService.downloadFoodByIdAndSaveProductToDb(1L);
+        foodNutritionService.downloadFoodByIdAndSaveProductToDb(23L);
+        foodNutritionService.downloadFoodByIdAndSaveProductToDb(397L);
+        foodNutritionService.downloadFoodByIdAndSaveProductToDb(90L);
+        foodNutritionService.downloadFoodByIdAndSaveProductToDb(970L);
+        foodNutritionService.downloadFoodByIdAndSaveProductToDb(7910L);
+        foodNutritionService.downloadFoodByIdAndSaveProductToDb(12345L);
 
-
-//        productRepository.save(productEntity);
+        // podejrzewam, że najbardziej chciałbyś mieć możliwość dodawania produktów z API tylko na podstawie ich nazwy
+        // tutaj jest gotowa metoda, która to umożliwia
+        foodNutritionService.downloadFoodsByNameAndSaveProductToDb("beef", 5);
+        foodNutritionService.downloadFoodsByNameAndSaveProductToDb("apple", 3);
+        foodNutritionService.downloadFoodsByNameAndSaveProductToDb("chicken", 5);
     }
-    // TODO zbudowac na tej podstawie ProductEntity (new ProductEntity()    .setName(..)
-    // TODO zapisac ProductEntity do bazy (używając ProductRepository) save
 }
