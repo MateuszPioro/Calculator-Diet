@@ -59,21 +59,12 @@ public class ProductService {
         saveProductDTO(productDto);
 
 
-        foodNutritionService.downloadFoodByIdAndSaveProductToDb(39790L);
 
-        foodNutritionService.downloadFoodByIdAndSaveProductToDb(32L);
-        foodNutritionService.downloadFoodByIdAndSaveProductToDb(315L);
-        foodNutritionService.downloadFoodByIdAndSaveProductToDb(1L);
-        foodNutritionService.downloadFoodByIdAndSaveProductToDb(23L);
-        foodNutritionService.downloadFoodByIdAndSaveProductToDb(397L);
-        foodNutritionService.downloadFoodByIdAndSaveProductToDb(90L);
-        foodNutritionService.downloadFoodByIdAndSaveProductToDb(970L);
-        foodNutritionService.downloadFoodByIdAndSaveProductToDb(7910L);
-        foodNutritionService.downloadFoodByIdAndSaveProductToDb(12345L);
 
 
         foodNutritionService.downloadFoodsByNameAndSaveProductToDb("beef", 5);
         foodNutritionService.downloadFoodsByNameAndSaveProductToDb("apple", 3);
         foodNutritionService.downloadFoodsByNameAndSaveProductToDb("chicken", 5);
+
     }
 }
